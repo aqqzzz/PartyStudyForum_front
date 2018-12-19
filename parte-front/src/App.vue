@@ -10,7 +10,9 @@
       <el-button>el-button</el-button>
       <el-checkbox>el-checkbox</el-checkbox>
     </div>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-link to="/about">About</router-link>
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <router-view></router-view>
   </div>
 </template>
 
