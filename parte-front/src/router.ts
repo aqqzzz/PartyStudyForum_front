@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import About from './views/About.vue'
+import LoginForm from './views/LoginForm.vue'
 
 Vue.use(Router)
 
@@ -12,7 +12,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: LoginForm
     },
     {
       path: '/about',
@@ -22,5 +22,6 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import('./views/About.vue')
     }
+    
   ]
 })
