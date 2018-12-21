@@ -17,13 +17,13 @@
   </div>
 </template>
 <script lang="ts">
-import { Vue, Component, Model } from 'vue-property-decorator';
-import LoginForm from '../../components/form/LoginForm.vue'
-import RegistForm from '../../components/form/RegistForm.vue'
+import { Vue, Component, Model } from 'vue-property-decorator'
+import LoginForm from '@/components/form/LoginForm.vue'
+import RegistForm from '@/components/form/RegistForm.vue'
 @Component({
   components: {
-    "LoginForm": LoginForm,
-    "RegistForm": RegistForm
+    LoginForm,
+    RegistForm
   }
 })
 export default class LoginContainer extends Vue {
@@ -31,9 +31,9 @@ export default class LoginContainer extends Vue {
     type: String,
     default: 'login'
   })
-  type!: string
+  private type!: string
 
-  handleChangeType() {
+  private handleChangeType() {
     console.log(this.type)
     this.type = this.type === 'login' ? 'regist' : 'login'
   }

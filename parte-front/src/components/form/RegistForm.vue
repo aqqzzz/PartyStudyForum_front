@@ -17,30 +17,30 @@
     </el-form-item>
   </el-form>
 </template>
-<script>
+<script lang="ts">
 import { Vue, Component, Emit } from 'vue-property-decorator'
 @Component
 export default class RegistForm extends Vue {
-  registForm = {
+  private registForm = {
     username: '',
     password: '',
     rePassword: '',
   }
 
-  validatePass = (rule, value, callback) => {
+  private validatePass = (rule: any, value: any, callback: any) => {
     // console.log(value, rule)
     if (!value) {
         callback('请输入密码')
     } else {
         if (this.registForm.rePassword) {
-            this.$refs.registForm.validateField(['rePassword'])
+            (this.$refs.registForm as any).validateField(['rePassword'])
         } else {
             callback()
         }
     }
   }
 
-  validatePass2 = (rule, value, callback) => {
+  private validatePass2 = (rule: any, value: any, callback: any) => {
     if (!value) {
         callback('请再次输入密码')
     } else if (value !== this.registForm.password) {
@@ -50,25 +50,25 @@ export default class RegistForm extends Vue {
     }
   }
 
-  registRules = {
+  private registRules = {
     username: [
       { required: true, message: '请输入用户名', trigger: 'blur'}
     ],
     password: [
-        {validator: this.validatePass, trigger: "blur"}
+        {validator: this.validatePass, trigger: 'blur'}
     ],
     rePassword: [
-        {validator: this.validatePass2, trigger: "blur"}
+        {validator: this.validatePass2, trigger: 'blur'}
     ]
-  }
+  }  
 
   @Emit('changeType')
-  toLogin() {
+  private toLogin() {
     console.log('toLogin')
   }
 
-  handleSubmit(formName) {
-    this.$refs[formName].validate((valid) => {
+  private handleSubmit(formName: string) {
+    (this.$refs[formName] as any).validate((valid: boolean) => {
       if (!valid) {
         return
       }
