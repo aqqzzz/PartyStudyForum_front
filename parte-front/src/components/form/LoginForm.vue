@@ -21,27 +21,27 @@ import { Vue, Component, Emit, Prop } from 'vue-property-decorator'
 export default class LoginForm extends Vue {
     // @Prop(function) changeType!: () => void
 
-    loginForm = {
+    public loginForm = {
         username: '',
         password: '',
     }
-    commenRules = {
+    public commenRules = {
         username: [
-            {required: true, message:'请输入用户名', trigger: 'blur'}
+            {required: true, message: '请输入用户名', trigger: 'blur'}
         ],
         password: [
             {required: true, message: '请输入密码', trigger: 'blur'}
         ]
     }
-    loginRules = {
+    public loginRules = {
         ...this.commenRules
     }
     @Emit('changeType')
-    toRegist() {
+    public toRegist() {
         console.log('to regist')
     }
 
-    handleSubmit(formName: string) {
+    public handleSubmit(formName: string) {
         this.$refs[formName].validate((valid: boolean) => {
             console.log(valid, this.loginForm)
             if (!valid) {
