@@ -18,8 +18,8 @@
 </template>
 <script lang="ts">
 import { Vue, Component, Model } from 'vue-property-decorator'
-import LoginForm from '@/components/form/LoginForm.vue'
-import RegistForm from '@/components/form/RegistForm.vue'
+import LoginForm from './form/LoginForm.vue'
+import RegistForm from './form/RegistForm.vue'
 @Component({
   components: {
     LoginForm,

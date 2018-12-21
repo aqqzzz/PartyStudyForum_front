@@ -1,6 +1,8 @@
 <template>
     <el-form :model="loginForm" :rules="loginRules" ref="loginForm" label-width="60px" class="loginForm">
         <el-form-item prop="username">
+            <i class="ai-smile-o"></i>
+
             <el-input placeholder="请输入用户名" v-model="loginForm.username" auto-complete="false"></el-input>
         </el-form-item>
         <el-form-item prop="password">
