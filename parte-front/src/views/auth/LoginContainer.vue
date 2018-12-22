@@ -27,14 +27,14 @@ import RegistForm from './form/RegistForm.vue'
   }
 })
 export default class LoginContainer extends Vue {
-  @Model('type', {
-    type: String,
-    default: 'login'
-  })
-  private type!: string
+  // @Model('type', {
+  //   type: String,
+  //   default: 'login'
+  // })
+  private type = 'login'
 
   private handleChangeType() {
-    console.log(this.type)
+    console.log(this)
     this.type = this.type === 'login' ? 'regist' : 'login'
   }
 

@@ -24,7 +24,17 @@ export default new Router({
       component: () => import('./views/About.vue')
     }, {
       path: '/org',
-      component: () => import('./views/orgs/OrgListContainer.vue')
+      component: () => import('./views/orgs/OrgIndex.vue'),
+      children: [
+        {
+          path: 'list',
+          component: () => import('./views/orgs/OrgListContainer.vue'),
+        },
+        {
+          path: 'detail/:id',
+          // component: 
+        }
+      ]
     }
     
   ]
