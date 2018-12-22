@@ -50,16 +50,19 @@ export default class RegistForm extends Vue {
     }
   }
 
-  private registRules = {
-    username: [
-      { required: true, message: '请输入用户名', trigger: 'blur'}
-    ],
-    password: [
-        {validator: this.validatePass, trigger: 'blur'}
-    ],
-    rePassword: [
-        {validator: this.validatePass2, trigger: 'blur'}
-    ]
+  private get registRules() {
+    return {
+      username: [
+        { required: true, message: '请输入用户名', trigger: 'blur'}
+      ],
+      password: [
+          {validator: this.validatePass, trigger: 'blur'}
+      ],
+      rePassword: [
+          {validator: this.validatePass2, trigger: 'blur'}
+      ]
+    }
+    
   }  
 
   @Emit('changeType')

@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import LoginContainer from './views/auth/LoginContainer.vue'
 import PostItem from './views/post/PostItem.vue'
+import OrgListItem from './views/orgs/OrgListItem.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -11,8 +13,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: LoginContainer
+      // name: 'home',
+      component: LoginContainer,
     },
     {
       path: '/about',
@@ -34,7 +36,10 @@ export default new Router({
         component: PostItem,
       }, {
         path: 'org/list',
-        component: { template: '<div>org</div>' }
+        component: () => import('./views/orgs/OrgListContainer.vue')
+      }, {
+        path: 'org/detail',
+        component: OrgListItem
       }]
     }
   ]

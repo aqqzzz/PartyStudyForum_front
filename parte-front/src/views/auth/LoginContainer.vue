@@ -18,8 +18,8 @@
 </template>
 <script lang="ts">
 import { Vue, Component, Model } from 'vue-property-decorator'
-import LoginForm from '@/components/form/LoginForm.vue'
-import RegistForm from '@/components/form/RegistForm.vue'
+import LoginForm from './form/LoginForm.vue'
+import RegistForm from './form/RegistForm.vue'
 @Component({
   components: {
     LoginForm,
@@ -27,14 +27,19 @@ import RegistForm from '@/components/form/RegistForm.vue'
   }
 })
 export default class LoginContainer extends Vue {
-  @Model('type', {
-    type: String,
-    default: 'login'
-  })
-  private type!: string
+  // @Model('type', {
+  //   type: String,
+  //   default: 'login'
+  // })
+  private type = 'login'
 
+<<<<<<< HEAD
   private handleChangeType = () => {
     console.log(this.type)
+=======
+  private handleChangeType() {
+    console.log(this)
+>>>>>>> 731234f1fd8b51e1368474bfec155fdb9a2fc589
     this.type = this.type === 'login' ? 'regist' : 'login'
   }
 
