@@ -32,7 +32,7 @@ export default new Router({
         },
         {
           path: 'detail/:id',
-          // component: 
+          component: () => import('./views/orgs/OrgDetailContainer.vue')
         }
       ]
     }
