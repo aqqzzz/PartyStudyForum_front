@@ -6,8 +6,7 @@
       <div>支部</div>
     </div>
     <div class="body">
-      <PostItem />
-      <PostItem />
+      <router-view />
     </div>
   </div>
 </template>
