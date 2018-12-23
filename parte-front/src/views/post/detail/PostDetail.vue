@@ -46,7 +46,10 @@
 
 <script lang="ts">
 import { Component, Vue, Model } from 'vue-property-decorator'
+import Quill from 'quill'
 import { quillEditor as QuillEditor, IQuillEditor } from 'vue-quill-editor'
+import { ImageDrop } from 'quill-image-drop-module'
+Quill.register('modules/imageDrop', ImageDrop)
 @Component({
   components: {
     QuillEditor
@@ -68,7 +71,16 @@ export default class PostDetail extends Vue {
   private content = ''
   private editorOption = {
     modules: {
-      toolbar: '#toolbar'
+      toolbar: '#toolbar',
+      imageDrop: true,
+      imageResize: {
+        displayStyles: {
+          backgroundColor: 'black',
+          border: 'none',
+          color: 'white'
+        },
+        modules: [ 'Resize', 'DisplaySize', 'Toolbar' ]
+      }
     },
     placeholder: '请输入内容'
   }

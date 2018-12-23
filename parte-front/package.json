@@ -10,6 +10,8 @@
   "dependencies": {
     "ant-design-icons": "^1.3.3",
     "element-ui": "^2.4.11",
+    "quill-image-drop-module": "^1.0.3",
+    "quill-image-resize-module": "^1.0.0",
     "vue": "^2.5.17",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^7.0.0",
