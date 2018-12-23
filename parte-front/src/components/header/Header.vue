@@ -21,6 +21,7 @@ export default class Header extends Vue {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 600;
   .title {
     font-size: 22px;
     color: rgba(0,0,0,0.84);

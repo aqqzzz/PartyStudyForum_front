@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import LoginContainer from './views/auth/LoginContainer.vue'
-import PostItem from './views/post/PostItem.vue'
 import OrgListItem from './views/orgs/OrgListItem.vue'
 
 Vue.use(Router)
@@ -33,7 +32,10 @@ export default new Router({
       component: () => import('./views/index/Index.vue'),
       children: [{
         path: 'post/list',
-        component: PostItem,
+        component: () => import('./views/post/PostList.vue'),
+      }, {
+        path: 'post/detail',
+        component: () => import('./views/post/detail/PostDetail.vue'),
       }, {
         path: 'org/list',
         component: () => import('./views/orgs/OrgListContainer.vue')

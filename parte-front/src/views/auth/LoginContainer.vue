@@ -33,13 +33,8 @@ export default class LoginContainer extends Vue {
   // })
   private type = 'login'
 
-<<<<<<< HEAD
   private handleChangeType = () => {
     console.log(this.type)
-=======
-  private handleChangeType() {
-    console.log(this)
->>>>>>> 731234f1fd8b51e1368474bfec155fdb9a2fc589
     this.type = this.type === 'login' ? 'regist' : 'login'
   }
 
