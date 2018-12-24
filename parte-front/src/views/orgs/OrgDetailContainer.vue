@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <OrgCard></OrgCard>
+    <OrgHeader></OrgHeader>
     <OrgMember></OrgMember>
   </div>
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 import OrgMember from './components/OrgMember.vue'
-import OrgCard from './components/OrgCard.vue'
+import OrgHeader from './components/OrgHeader.vue'
 @Component({
   components: {
-    OrgCard,
+    OrgHeader,
     OrgMember,
   }
 })
