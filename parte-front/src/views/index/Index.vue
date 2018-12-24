@@ -26,9 +26,11 @@ export default class Index extends Vue {}
 
 <style lang="scss" scoped>
 .Index {
-  max-width: 1032px;
-  margin: 0 auto;
+
+
   .navbar {
+    max-width: 1032px;
+    margin: 0 auto;
     height: 36px;
     padding-top: 4px;
     display: flex;
@@ -42,6 +44,8 @@ export default class Index extends Vue {}
     }
   }
   .body {
+    max-width: 1032px;
+    margin: 0 auto;
   }
 }
 </style>

@@ -22,9 +22,12 @@ export default class Header extends Vue {
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
+  padding-left: 60px;
+  background: #c12125;
+
   .title {
     font-size: 22px;
-    color: rgba(0,0,0,0.84);
+    color: #fff;
   }
   .profile {
 
