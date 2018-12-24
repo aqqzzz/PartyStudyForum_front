@@ -59,27 +59,43 @@ export default class OrgMember extends Vue {
   .memberContainer .el-tabs__nav-wrap::after {
     display: none;
   }
+  /* .memberContainer .el-tabs__active-bar{
+    background-color: rgb(193, 33, 37)
+    /* .el-tabs__item.is-active {
+      color: $red-color;
+    } */
+  /* } */
+
+  /* .membercontainer .el-tabs__item.is-active {
+    color: rgb(193, 33, 37);
+  } */
 </style>
 <style lang="scss" scoped>
-.listHeader {
+@import './constant.scss';
+.memberContainer {
+  .listHeader {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      // justify-content: space-between;
+      .el-input {
+        width: 180px;
+      }
+  }
+  .listContainer {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    // justify-content: space-between;
-    .el-input {
-      width: 180px;
+    flex-wrap: wrap;
+    
+    .memberCardWrapper {
+      margin-right: 20px;
+      margin-top: 10px;
     }
-}
-.listContainer {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  
-  .memberCardWrapper {
-    margin-right: 20px;
-    margin-top: 10px;
   }
+
+  
 }
+
 
 </style>
 

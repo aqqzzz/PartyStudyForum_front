@@ -29,18 +29,19 @@ export default class Index extends Vue {}
   max-width: 1032px;
   margin: 0 auto;
   .navbar {
-    height: 50px;
+    height: 36px;
+    padding-top: 4px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     & > div {
-      color: rgba(0,0,0,.84);
+      color: rgba(0,0,0,.54);
       margin-right: 24px;
       font-size: 16px;
+      line-height: 22px;
+      font-weight: 500;
     }
   }
   .body {
-    margin-top: 48px;
-
   }
 }
 </style>

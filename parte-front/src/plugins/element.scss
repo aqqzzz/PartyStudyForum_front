@@ -1,0 +1,25 @@
+$light-color: rgba(0, 0, 0, 0.54);
+$dark-color:  rgba(0, 0, 0, 0.84);
+$red-color: rgb(193, 33, 37);
+$red-light-color: rgb(240, 93, 100);
+// tabs
+.el-tabs__item.is-active {
+  color: $red-color;
+}
+
+.el-tabs__active-bar{
+  background-color: $red-color;
+}
+
+// button
+.el-button--primary {
+  background-color: $red-color;
+  border-color: $red-color;
+
+  &:focus, &:hover {
+    background-color: $red-light-color;
+    border-color: $red-light-color;
+  }
+}
+
+
